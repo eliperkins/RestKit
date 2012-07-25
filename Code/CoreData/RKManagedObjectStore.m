@@ -125,7 +125,7 @@ static RKManagedObjectStore *defaultObjectStore = nil;
 
         if (nilOrManagedObjectModel == nil) {
             // NOTE: allBundles permits Core Data setup in unit tests
-            nilOrManagedObjectModel = [NSManagedObjectModel mergedModelFromBundles:[NSBundle allBundles]];
+            nilOrManagedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
         }
         NSMutableArray* allManagedObjectModels = [NSMutableArray arrayWithObject:nilOrManagedObjectModel];
         _managedObjectModel = [[NSManagedObjectModel modelByMergingModels:allManagedObjectModels] retain];
